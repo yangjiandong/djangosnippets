@@ -1,8 +1,13 @@
-==========
+djangosnippets.org
+==================
+
+fork from [https://github.com/django-de/djangosnippets.org]
+
 python env
 ==========
 
 use requirements2.txt,other module installed by man
+
 pip install Whoosh
 
 ===
