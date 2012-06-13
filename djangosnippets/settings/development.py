@@ -4,6 +4,8 @@ DEBUG = True
 
 SECRET_KEY = 'abcdefghijklmnopqrstuvwxyz0123456789'
 
+STATIC_URL = '/assets/static/'
+
 ADMINS = (
 )
 MANAGERS = ADMINS

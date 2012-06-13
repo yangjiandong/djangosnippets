@@ -6,3 +6,6 @@ pip-log.txt
 *~
 dist/
 *.egg-info/
+
+myenv
+djangosnippets/snippets.db
