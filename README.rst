@@ -1,3 +1,10 @@
+==========
+python env
+==========
+
+use requirements2.txt,other module installed by man
+pip install Whoosh
+
 ===
 Cab
 ===
