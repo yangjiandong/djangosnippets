@@ -35,7 +35,7 @@ Cab has a couple of external dependencies:
 
     * `django-simple-ratings`_ for item ranking
 
-    * `django-taggit`_ for tagging 
+    * `django-taggit`_ for tagging
 
     * `django-haystack`_ for search
 
@@ -57,7 +57,7 @@ for ease of site maintenance.
 Once you've got those taken care of, grab a git checkout of Cab
 from somewhere on your Python path::
 
-    git clone git://github.com/coleifer/djangosnippets.org.git 
+    git clone git://github.com/coleifer/djangosnippets.org.git
 
 Then add ``ratings``, ``taggit`` and ``cab`` to the ``INSTALLED_APPS`` setting
 of your Django project, run ``manage.py syncdb``, and either put a call to
@@ -84,7 +84,7 @@ For search support you need to set up a search engine and configure haystack:
 ``# Place where search indexes are stored for snippets - should be non web accessible``
 ``HAYSTACK_WHOOSH_PATH = '/some-path/search-index'``
 
-And you should add a file called ``search_sites.py`` to your project with the 
+And you should add a file called ``search_sites.py`` to your project with the
 following lines:
 
 ``import haystack``
@@ -110,3 +110,10 @@ Yeah, there are tests now.
 ====
 
     * virtualenv 环境安装后不能随意更改安装路径，安装时脚本已写死
+
+    * .git/config
+
+    `repositoryformatversion = 0`
+    `filemode = false`
+    `logallrefupdates = true`
+    `autocrlf = false`
