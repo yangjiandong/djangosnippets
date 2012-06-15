@@ -105,3 +105,8 @@ OMGWTF Tests?
 Yeah, there are tests now.
 
 .. _djangosnippets.org: http://djangosnippets.org/
+
+注意
+====
+
+    * virtualenv 环境安装后不能随意更改安装路径，安装时脚本已写死
