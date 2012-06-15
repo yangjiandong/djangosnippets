@@ -113,7 +113,7 @@ Yeah, there are tests now.
 
     * .git/config
 
-    `repositoryformatversion = 0`
-    `filemode = false`
-    `logallrefupdates = true`
-    `autocrlf = false`
+    ``repositoryformatversion = 0``
+    ``filemode = false``
+    ``logallrefupdates = true``
+    ``autocrlf = false``
