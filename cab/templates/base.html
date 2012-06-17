@@ -2,25 +2,25 @@
                       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Django snippets: {% block title %}Home{% endblock %}</title>
-  
-  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <title>Django snippets: {% block title %}首页{% endblock %}</title>
+
+  <link href="{{ STATIC_URL }}css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="{{ STATIC_URL }}js/jquery/1.4/jquery.min.js"></script>
+  <script src="{{ STATIC_URL }}js/jqueryui/1.8/jquery-ui.min.js"></script>
 
   <link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico" />
   <link rel="stylesheet" href="{{ STATIC_URL }}css/snippets.css" type="text/css" />
   <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.css" type="text/css" />
   <link rel="alternate" href="/feeds/latest/" type="application/atom+xml" title="Feed of latest snippets" />
   {% block feeds %}{% endblock %}
-  
+
   {% block extra_scripts %}{% endblock %}
   <script type="text/javascript" language="javascript" src="{{ STATIC_URL }}js/snippets.js"></script>
   <script type="text/javascript" language="javascript">
     $(function() {
       var snippet_completion = new Snippets.SnippetCompletion()
       snippet_completion.bind_listener('#id_q');
-      
+
       if ($('#id_tags').length > 0) {
         var tag_completion = new Snippets.TagCompletion()
         tag_completion.bind_listener('#id_tags');
@@ -34,7 +34,7 @@
     <div id="nav-main">
       <span>
         {% if user.is_authenticated %}
-          Logged in as <a href="/users/{{ user.username }}/">{{ user.username }}</a> (<a href="/snippets/add/">Add a snippet</a>) (<a href="/accounts/logout/">Log out</a>)
+          Logged in as <a href="/users/{{ user.username }}/">{{ user.username }}</a> (<a href="/snippets/add/">Add a snippet</a>) (<a href="/accounts/logout/">注销</a>)
         {% else %}
           <a href="/accounts/login/?next={% ifequal request.path "/accounts/logout/" %}/{% else %}{{ request.path }}{% endifequal %}">Log in</a> or <a href="/accounts/register/">register</a>
         {% endif %}

@@ -1,3 +1,4 @@
+==================
 djangosnippets.org
 ==================
 
@@ -10,7 +11,6 @@ use requirements2.txt,other module installed by man
 
 pip install Whoosh
 
-===
 Cab
 ===
 
@@ -114,6 +114,9 @@ Yeah, there are tests now.
     * .git/config
 
     ``repositoryformatversion = 0``
+
     ``filemode = false``
+
     ``logallrefupdates = true``
+
     ``autocrlf = false``
