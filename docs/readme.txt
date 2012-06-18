@@ -2,6 +2,26 @@
 djangosnippets.org
 ==================
 
+2012.06.18
+==========
+
+   1. Cross-site request forgery (CSRF)
+
+   防止恶意网站访问
+
+   2. models.Manager
+
+   可以认为是model admin中自定义的方法
+
+   3. annotate,
+
+   在QuerySet中提供一些计算函数
+
+   Aggregation
+
+   4. add django-debug-toolbar
+   https://github.com/django-debug-toolbar/django-debug-toolbar
+
 2012.06.16
 ==========
 
