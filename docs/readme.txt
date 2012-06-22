@@ -2,6 +2,46 @@
 djangosnippets.org
 ==================
 
+2012.06.22
+==========
+
+   1. 时间中文化
+TIME_ZONE = 'Asia/Shanghai'
+LANGUAGE_CODE = 'zh-cn'
+
+2012.06.21
+==========
+
+   1. @permalink
+
+   cb.models.get_absolute_url
+
+   language_list.html
+      <a href="{{ language.get_absolute_url }}">{{ language.name }}</a></li>
+
+   -- 还没体会出好处
+
+   另一个例子:
+
+   @permalink
+   def get_absolute_url(self):
+        return ('cab_snippet_detail', (), {'snippet_id': self.id})
+
+   cab_snippet_detail --> cab.url.snippets.py :
+
+   url(r'^(?P<snippet_id>\d+)/$',
+        snippets.snippet_detail,
+        name='cab_snippet_detail'),
+
+   对应views.snippets.py
+   def snippet_detail(request, snippet_id):
+    return object_detail(
+        request,
+        queryset=Snippet.objects.all(),
+        object_id=snippet_id,
+        extra_context={'flag_form': SnippetFlagForm()},
+    )
+
 2012.06.18
 ==========
 

@@ -4,6 +4,9 @@ from djangosnippets.settings.base import *
 
 DEBUG = True
 
+TIME_ZONE = 'Asia/Shanghai'
+LANGUAGE_CODE = 'zh-cn'
+
 SECRET_KEY = 'abcdefghijklmnopqrstuvwxyz0123456789'
 
 STATIC_URL = '/assets/static/'
