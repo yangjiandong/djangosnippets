@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
 encoding//cab/migrations/0001_initial.py=utf-8
+encoding//cab/migrations/0002_migrate_ratings.py=utf-8
 encoding//djangosnippets/settings/development.py=utf-8
+encoding//djangosnippets/settings/production.py=utf-8
 encoding/<project>=UTF-8

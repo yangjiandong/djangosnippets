@@ -2,6 +2,64 @@
 djangosnippets.org
 ==================
 
+2012.06.23
+==========
+
+   1. SlugField
+
+class SlugField([max_length=50, **options])
+Slug is a newspaper term. A slug is a short label for something, containing only letters, numbers, underscores or hyphens.
+They're generally used in URLs.
+
+   2. signals
+
+
+   3. django 多数据库
+   https://docs.djangoproject.com/en/dev/topics/db/multi-db/#an-example
+   http://python.dzone.com/articles/django-switching-databases?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+zones%2Fpython+%28Python+Zone%29
+
+   4. nginx fcgi on win7
+
+   pip install flup
+   manage.py runfcgi method=threaded host=127.0.0.1 port=55880
+   配置nginx.conf
+
+        location /assets/static/ {
+            alias D:\\nginx\\nginx-1.3.1\\html\\static\\;
+        }
+
+        location / {
+            #root   html;
+            #index  index.html index.htm;
+
+            root   html;
+            index  index.html index.htm;
+
+            # host and port to fastcgi server
+            fastcgi_pass 127.0.0.1:5588;
+            fastcgi_param PATH_INFO $fastcgi_script_name;
+            fastcgi_param REQUEST_METHOD $request_method;
+            fastcgi_param QUERY_STRING $query_string;
+            fastcgi_param SERVER_NAME $server_name;
+            fastcgi_param SERVER_PORT $server_port;
+            fastcgi_param SERVER_PROTOCOL $server_protocol;
+            fastcgi_param CONTENT_TYPE $content_type;
+            fastcgi_param CONTENT_LENGTH $content_length;
+            fastcgi_pass_header Authorization;
+            fastcgi_intercept_errors off;
+        }
+
+   https://code.djangoproject.com/wiki/DjangoAndNginx
+
+   --using Gunicorn and nginx on linux
+
+   5. solr
+   http://jiaxin.im/2011/12/26/%E6%8A%98%E8%85%BE-django-solr/
+   http://www.slideshare.net/simon/advanced-aspects-of-the-django-ecosystem-haystack-celery-fabric
+
+   git clone https://github.com/screeley/solango.git
+
+
 2012.06.22
 ==========
 
